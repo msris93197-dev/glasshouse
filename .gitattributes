@@ -1,0 +1,7 @@
+# Normalise text files, but never let Git rewrite the ledger's bytes:
+# a CRLF conversion would change every hash and look exactly like tampering.
+* text=auto
+ledger/*.jsonl text eol=lf
+web/src/__fixtures__/*.jsonl text eol=lf
+*.parquet binary
+*.ipynb text eol=lf
